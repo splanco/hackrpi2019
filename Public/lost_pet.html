@@ -176,8 +176,20 @@
                             </div>
                         </div>
                         <div class="text-right"><br>
-                        <input class="btn btn-primary solid blank" type="submit", type="reset", type="button">
+                        <input class="btn btn-primary solid blank" type="submit", type="reset", type="button" onclick="getValue()">
                         </div>
+                        <script>
+                            function getValue(){
+                                var data = [];
+                                data.push("name");
+                                data.push("kind_of_animal");
+                                data.push("last_known");
+                                data.push("sex");
+                                //data.push(image);
+                                addrow(data);
+                            }
+                        </script>
+
                     </form>
                 </div>
             </div><!-- Content row -->

@@ -9,7 +9,6 @@ const app = express();
 
 // Express Middleware for serving static files
 app.use(express.static(path.join(__dirname, '/Public')));
-
 app.get('/', function(req, res) {
     res.redirect('index.html');
 });
