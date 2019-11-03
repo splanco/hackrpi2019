@@ -1,0 +1,16 @@
+{
+  "name": "hackrpi2019",
+  "version": "1.0.0",
+  "description": "Project programmed in 24 hours",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx nodemon server.js"
+  },
+  "author": "Richard Spencer Zach",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  }
+}
