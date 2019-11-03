@@ -1,9 +1,12 @@
-var path = require('path');
-var express = require('express');
-var app = express();
+var express = require('express'),
+    path = require('path'),
+    app = express();
 
-var dir = path.join(__dirname, 'public');
+// Express Middleware for serving static files
+app.use(express.static(path.join(__dirname, '/public')));
 
-app.use(express.static(dir));
+app.get('/', function(req, res) {
+    res.redirect('index.html');
+});
 
 app.listen(3000, () => console.log('Listening on http://localhost:3000/'));
