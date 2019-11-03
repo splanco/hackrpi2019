@@ -10,9 +10,22 @@ const app = express();
 // Express Middleware for serving static files
 app.use(express.static(path.join(__dirname, '/Public')));
 app.get('/', function(req, res) {
+    res.render('form');// if jade
     res.redirect('index.html');
 });
 
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+app.use(bodyParser.json());
+
+app.post('/',function(req,res){
+    var username = req.body.username;
+    var html = 'Hello:' + username;
+    res.send(html);
+    console.log(html);
+});
 
 var pool = mysql.createPool({
     connectionLimit : 100, //important
@@ -61,6 +74,7 @@ function deleteRow(userName) {
         console.log(response.affectedRows);
     });
 }
+
 
 
 // Start the server

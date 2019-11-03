@@ -142,7 +142,7 @@
 
                 <div class="col-md-12">
 
-                    <form id="contact-form" action="submit.html" method="post" role="form">
+                    <form id="contact-form" action="submit.html" name="regForm">
                         <div class="error-container"></div>
                         <div class="row">
                             <div class="col-md-4">
@@ -171,18 +171,8 @@
                             </div>
                         </div>
                         <div class="text-right"><br>
-                            <button class="btn btn-primary solid blank" type="submit" onclick="getValue()">Send Report</button>
+                            <button class="btn btn-primary solid blank" type="submit">Send Report</button>
                         </div>
-                        <script>
-                            function getValue() {
-                                var data = [];
-                                data.push("name");
-                                data.push("kind_of_animal");
-                                data.push("found_pet");
-                                data.push("pet_now");
-
-                            }
-                        </script>
                     </form>
                 </div>
             </div><!-- Content row -->
