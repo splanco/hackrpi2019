@@ -1,3 +1,4 @@
+require('@google-cloud/debug-agent').start();
 const express = require('express');
 const fileUpload = require('express-fileupload');
 const bodyParser = require('body-parser');
@@ -11,10 +12,19 @@ const app = express();
 
 
 // Express Middleware for serving static files
-app.use(express.static(path.join(__dirname, '/public')));
+app.use(express.static(path.join(__dirname, '/Public')));
 
 app.get('/', function(req, res) {
     res.redirect('index.html');
 });
 
-app.listen(3000, () => console.log('Listening on http://localhost:3000/'));
+
+// Start the server
+const PORT = process.env.PORT || 8080;
+app.listen(PORT, () => {
+    console.log('Listening on http://localhost:8080/');
+    console.log('Press Ctrl+C to quit.');
+});
+// [END gae_node_request_example]
+
+module.exports = app;
