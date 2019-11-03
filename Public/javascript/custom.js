@@ -1,22 +1,3 @@
-/*
-	Template Name: Cornike - Business HTML5 Template
-	Author: Tripples
-	Author URI: https://themeforest.net/user/tripples
-	Description: Cornike - Business HTML5 Template
-	Version: 1.0
-
-	1. Fixed header
-	2. Main slideshow
-	3. Site search
-	4. Owl Carousel
-	5. Video popup
-	6. Counter
-	7. Contact form
-	8. Back to top
-  
-*/
-
-
 jQuery(function ($) {
 	"use strict";
 
